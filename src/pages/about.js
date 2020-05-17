@@ -1,13 +1,13 @@
 import React from "react"
-import "../assets/css/font.css"
 import Header from "../components/header"
+import Subtitle from "../components/subtitle"
 
 export default function About() {
   return (
-    <div style={{ color: "#666" }}>
+    <div>
       <Header headerText="About" />
 
-      <p>私はかすみと申します。</p>
+      <Subtitle subtitleText="私はかすみと申します。" />
     </div>
   )
 }

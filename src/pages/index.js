@@ -1,15 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import "../assets/css/font.css"
 import Header from "../components/header"
-
+import Subtitle from "../components/subtitle"
+import Waterfall from "../components/waterfall"
+import Footer from "../components/footer"
 export default function Home() {
   return (
-    <div style={{ color: "#666" }}>
+    <div>
       <Header headerText="Kasumi's portfolio" />
-      <p>かすみのポートフォリオ</p>
-      <Link to="/about/">click to about me</Link>
+      <Subtitle subtitleText="かすみのポートフォリオ" />
+      <Waterfall />
+      <Footer />
     </div>
   )
 }

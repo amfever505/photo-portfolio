@@ -1,10 +1,10 @@
 import React from "react"
 import "../assets/css/layout.css"
 
-export default function Header(props) {
+export default function Subtitle(props) {
   return (
     <div className="container">
-      <h1 style={{ marginTop: "60px" }}>{props.headerText}</h1>
+      <h4>{props.subtitleText}</h4>
     </div>
   )
 }

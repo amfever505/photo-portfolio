@@ -1,0 +1,58 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 800px;
+}
+
+/* waterfall */
+
+.root {
+  display: flex;
+  width: 816px;
+  height: 66vh;
+  overflow: hidden;
+  margin-left: -16px;
+  /* margin-right: -16px; */
+}
+.itemCol {
+  flex-direction: column;
+  /* position: relative; */
+  width: 25%;
+  height: 100%;
+  margin-left: 16px;
+}
+
+.itemType1,
+.itemType2,
+.itemType3 {
+  position: relative;
+  background-color: lightsteelblue;
+  margin-bottom: 16px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.itemType1 {
+  height: 26%;
+}
+
+.itemType2 {
+  height: 30%;
+}
+
+.itemType3 {
+  height: 37%;
+}
+
+/* link button */
+
+.linkButton {
+  position: absolute;
+  bottom: 0;
+  margin: 8px;
+  color: white;
+  text-decoration: none;
+}
