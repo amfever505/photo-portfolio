@@ -3,12 +3,12 @@ import Header from "../components/header"
 import Subtitle from "../components/subtitle"
 import Footer from "../components/footer"
 
-export default function About() {
+export default function RozenMaiden() {
   return (
     <div>
-      <Header headerText="About" />
+      <Header headerText="ローゼンメイデン" />
 
-      <Subtitle subtitleText="私はかすみと申します。" />
+      <Subtitle subtitleText="コスプレテーマの撮影会" />
       <Footer />
     </div>
   )

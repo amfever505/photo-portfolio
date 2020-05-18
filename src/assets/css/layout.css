@@ -35,6 +35,11 @@
   background-position: center;
 }
 
+/* .itemType1:hover,
+.itemType2:hover,
+.itemType3:hover {
+  background-image: none;
+} */
 .itemType1 {
   height: 26%;
 }
