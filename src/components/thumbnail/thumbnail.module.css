@@ -1,0 +1,30 @@
+.root {
+  display: inline-flex;
+  width: 816px;
+  /* height: 30vh; */
+  flex-wrap: wrap;
+  /* margin-left: -16px; */
+  margin-right: -16px;
+}
+
+.thumbnail {
+  position: relative;
+
+  min-width: 31%;
+  height: 0;
+  /* padding-bottomの測り方は、上記rootの幅816によるので、こちらwidth256に対し、長さは816の中の何％かとのこと */
+  padding-bottom: 23.5%;
+  flex: 1;
+
+  background-color: #666;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  transition: 0.3s;
+  background-size: cover;
+  background-position: center;
+
+  /* border-bottom: 0px solid #e3c0d3; */
+}
+.thumbnail:hover {
+  /* border-bottom: 67px solid #e3c0d3; */
+}

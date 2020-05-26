@@ -5,13 +5,14 @@ export default function albumItem(props) {
   const { type, url, linkTo, linkText } = props
 
   return (
-    <div
-      className={`itemType${type}`}
-      style={{ backgroundImage: `url(${url})` }}
-    >
-      <Link className="linkButton" to={linkTo}>
-        {linkText}
-      </Link>
-    </div>
+    <Link to={linkTo}>
+      <div className={`itemType${type}`}>
+        <div
+          className="albumCover"
+          style={{ backgroundImage: `url(${url})` }}
+        />
+        <h4 className="linkButton">{linkText}</h4>
+      </div>
+    </Link>
   )
 }

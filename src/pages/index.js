@@ -1,14 +1,15 @@
 import React from "react"
 
 import Header from "../components/header"
-import Subtitle from "../components/subtitle"
 import Waterfall from "../components/waterfall"
 import Footer from "../components/footer"
+import "../firebase/api"
+
 export default function Home() {
   return (
-    <div>
-      <Header headerText="Kasumi's portfolio" />
-      <Subtitle subtitleText="かすみのポートフォリオ" />
+    <div style={{ height: "100vh", overflowY: "hidden" }}>
+      <Header titleText="Kasumi's gallery" subtitleText="かすみのギャラリー" />
+
       <Waterfall />
       <Footer />
     </div>

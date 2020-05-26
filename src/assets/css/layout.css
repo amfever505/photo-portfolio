@@ -1,11 +1,3 @@
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  max-width: 800px;
-}
-
 /* waterfall */
 
 .root {
@@ -28,18 +20,18 @@
 .itemType2,
 .itemType3 {
   position: relative;
-  background-color: lightsteelblue;
+  background-color: #e3c0d3;
   margin-bottom: 16px;
-
+  transition: 0.3s;
   background-size: cover;
   background-position: center;
 }
 
-/* .itemType1:hover,
-.itemType2:hover,
-.itemType3:hover {
-  background-image: none;
-} */
+.itemType1:hover .albumCover,
+.itemType2:hover .albumCover,
+.itemType3:hover .albumCover {
+  height: 0;
+}
 .itemType1 {
   height: 26%;
 }
@@ -52,9 +44,78 @@
   height: 37%;
 }
 
+.albumCover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+/* 2col */
+.row {
+  display: flex;
+  width: 800px;
+  height: 66vh;
+  overflow: hidden;
+  /* margin-left: -16px; */
+  /* margin-right: -16px; */
+}
+.twoCol {
+  flex-direction: column;
+  /* position: relative; */
+  width: 50%;
+  height: 100%;
+  /* margin-left: 16px; */
+}
+
+/* aboutme */
+
+.contentBox {
+  padding: 8px;
+}
+.iconBox {
+  width: 100%;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.imgBox {
+  margin: 8px 0px 0px 8px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: lightsteelblue;
+
+  background-size: cover;
+  background-position: center;
+}
+.iconBox a {
+  display: inline-block;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  background-size: cover;
+  background-position: center;
+}
+
+.gitIcon {
+  background-image: url(../images/icon/githubicon.svg);
+}
+.linkedinIcon {
+  background-image: url(../images/icon/linkedinicon.png);
+}
+.plurkIcon {
+  background-image: url(../images/icon/plurkicon.png);
+}
+
 /* link button */
 
 .linkButton {
+  font-size: 11pt;
   position: absolute;
   bottom: 0;
   margin: 8px;
