@@ -1,34 +1,53 @@
 import React, { useEffect, useState } from "react"
+import Lightbox from "react-image-lightbox"
+import "react-image-lightbox/style.css"
 
 import Container from "../container/container"
 import thumbnailStyles from "./thumbnail.module.css"
 
-import { getImageURLFromDatabase } from "../../firebase/api"
-
 export default function Thumbnail(props) {
-  const path = window.location.pathname.substr(1)
-  // =>瀏覽器該頁面的名稱‘/...../’也就是相簿名稱
-  const [photoList, setPhotoList] = useState([])
+  const { photoList } = props
+  const [isOpenLightbox, setIsOpenLightbox] = useState(false)
+  const [photoIndex, setPhotoIndex] = useState(0)
 
-  useEffect(() => {
-    getImageURLFromDatabase(path).then(snapshot => {
-      const data = Object.values(snapshot.val())
-      console.log(data)
-      setPhotoList(data)
-    })
-  }, [])
+  const handleOpenLightbox = index => {
+    setIsOpenLightbox(true)
+    setPhotoIndex(index)
+  }
+
+  const handleCloseLightbox = () => {
+    setIsOpenLightbox(false)
+  }
 
   return (
     <Container>
       <div className={thumbnailStyles.root}>
-        {photoList.map(photo => (
+        {photoList.map((photo, idx) => (
           <div
             className={thumbnailStyles.thumbnail}
             style={{ backgroundImage: `url(${photo.thumbnail})` }}
-          >
-            <img></img>
-          </div>
+            onClick={() => handleOpenLightbox(idx)}
+          ></div>
         ))}
+        {isOpenLightbox && (
+          <Lightbox
+            mainSrc={photoList[photoIndex].original}
+            nextSrc={photoList[(photoIndex + 1) % photoList.length].original}
+            prevSrc={
+              photoList[(photoIndex + photoList.length - 1) % photoList.length]
+                .original
+            }
+            onCloseRequest={handleCloseLightbox}
+            onMovePrevRequest={() =>
+              setPhotoIndex(
+                (photoIndex + photoList.length - 1) % photoList.length
+              )
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % photoList.length)
+            }
+          />
+        )}
       </div>
     </Container>
   )

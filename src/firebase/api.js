@@ -1,5 +1,7 @@
 import firebase from "gatsby-plugin-firebase"
 
+import { GALLERY_INFO } from "../constants/gallery"
+
 const storage = firebase.storage()
 const database = firebase.database()
 
@@ -9,6 +11,7 @@ const albumListRef = database.ref("album-list")
 const writeImageURLToDatabase = (imageRef, albumRef) => {
   const itemRefOnDatabase = albumListRef
     .child(albumRef.name)
+    .child("gallery")
     .child(imageRef.name)
   //.child是database中照片資料儲存位置的路徑
   imageRef.listAll().then(imageRes => {
@@ -51,7 +54,16 @@ export const updateGallery = () => {
     })
     .catch(err => console.log(err))
 }
-updateGallery()
+
+export const createAlbum = () => {
+  GALLERY_INFO.forEach(gallery => {
+    albumListRef
+      .child(gallery.name)
+      .child("album-info")
+      .set({ ...gallery })
+  })
+}
+
 export const getImageURLFromDatabase = albumName => {
   return albumListRef.child(albumName).once("value")
 }

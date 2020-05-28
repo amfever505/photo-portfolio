@@ -31,13 +31,13 @@ export default function Waterfall(props) {
           <AlbumItem
             type={2}
             url={RozenMaidencover}
-            linkTo="RozenMaiden"
+            linkTo="/gallery?name=RozenMaiden"
             linkText="ローゼンメイデン >"
           ></AlbumItem>
           <AlbumItem
             type={3}
             url={C97cover}
-            linkTo="/C97/"
+            linkTo="/gallery?name=C97"
             linkText="C97二日目 >"
           ></AlbumItem>
         </div>
@@ -45,20 +45,20 @@ export default function Waterfall(props) {
           <AlbumItem
             type={3}
             url={Jinnbutu1cover}
-            linkTo="/Jinnbutu1/"
+            linkTo="/gallery?name=Jinnbutu1"
             linkText="人物写真その1 >"
           ></AlbumItem>
           <AlbumItem
             type={1}
             url={Jinnbutu2cover}
-            linkTo="/Jinnbutu2/"
+            linkTo="/gallery?name=Jinnbutu2"
             linkText="人物写真その2 >"
           ></AlbumItem>
 
           <AlbumItem
             type={2}
             url={NightPortraitcover}
-            linkTo="/NightPortrait/"
+            linkTo="/gallery?name=NightPortrait"
             linkText="夜ポートレート >"
           ></AlbumItem>
         </div>
@@ -66,19 +66,19 @@ export default function Waterfall(props) {
           <AlbumItem
             type={2}
             url={DancePortraitcover}
-            linkTo="/DancePortrait/"
+            linkTo="/gallery?name=DancePortrait"
             linkText="アーティスト >"
           ></AlbumItem>
           <AlbumItem
             type={3}
             url={OtherCosplaycover}
-            linkTo="/OtherCosplay/"
+            linkTo="/gallery?name=OtherCosplay"
             linkText="コスプレテーマその他 >"
           ></AlbumItem>
           <AlbumItem
             type={1}
             url={Filmcover}
-            linkTo="/Film/"
+            linkTo="/gallery?name=Film"
             linkText="フィルム >"
           ></AlbumItem>
         </div>
@@ -87,13 +87,13 @@ export default function Waterfall(props) {
           <AlbumItem
             type={1}
             url={Landscapecover}
-            linkTo="/Landscape/"
+            linkTo="/gallery?name=Landscape"
             linkText="ランドスケープ >"
           ></AlbumItem>
           <AlbumItem type={2} linkText="工事中..."></AlbumItem>
           <AlbumItem
             type={3}
-            linkTo="/others/"
+            linkTo="/gallery?name=others"
             linkText="その他作品 >"
           ></AlbumItem>
         </div>
