@@ -58,6 +58,8 @@
   width: 800px;
   height: 66vh;
   overflow: hidden;
+  margin-bottom: 20px;
+
   /* margin-left: -16px; */
   /* margin-right: -16px; */
 }
@@ -86,10 +88,25 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: lightsteelblue;
-
+  /* background-color: lightsteelblue; */
+}
+.mainImg {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+}
+.scrollViewImg {
+  width: 100%;
+  height: 132px;
+}
+.scrollViewImg .scrollView {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 800px 533px;
+  background-position: 50% 150%;
 }
 .iconBox a {
   display: inline-block;

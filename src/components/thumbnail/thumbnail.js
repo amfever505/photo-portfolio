@@ -37,6 +37,7 @@ export default function Thumbnail(props) {
               photoList[(photoIndex + photoList.length - 1) % photoList.length]
                 .original
             }
+            // imageCaption="test"
             onCloseRequest={handleCloseLightbox}
             onMovePrevRequest={() =>
               setPhotoIndex(

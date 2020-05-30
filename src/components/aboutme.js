@@ -2,6 +2,7 @@ import React from "react"
 import "../assets/css/layout.css"
 import { Link } from "gatsby"
 import Container from "./container/container"
+import HeaderBG from "../assets/images/about/headerBG.jpg"
 
 import Portrait from "../assets/images/about/Portrait.jpg"
 
@@ -37,11 +38,20 @@ export default function AboutMe(props) {
           </div>
         </div>
         <div className="twoCol">
-          <div
-            className="imgBox"
-            style={{ backgroundImage: `url(${Portrait})` }}
-          ></div>
+          <div className="imgBox">
+            <div
+              style={{ backgroundImage: `url(${Portrait})` }}
+              className="mainImg"
+            ></div>
+          </div>
         </div>
+      </div>
+
+      <div className="scrollViewImg">
+        <div
+          style={{ backgroundImage: `url(${HeaderBG})` }}
+          className="scrollView"
+        ></div>
       </div>
     </Container>
   )

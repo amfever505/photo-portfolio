@@ -19,12 +19,13 @@
   background-color: #666;
   margin-bottom: 16px;
   margin-right: 16px;
-  transition: 0.3s;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: all 1s;
 
   /* border-bottom: 0px solid #e3c0d3; */
 }
 .thumbnail:hover {
-  /* border-bottom: 67px solid #e3c0d3; */
+  background-size: 120% auto;
 }

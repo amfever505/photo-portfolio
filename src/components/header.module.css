@@ -3,18 +3,27 @@
 .header {
   width: 800px;
   margin-top: 60px;
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
   padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
 
   background-size: cover;
   background-position: center;
 }
-.header h2 {
-  /* margin-right: 14px; */
-}
 
+.scrollViewInner {
+  /* width: 100%; */
+  height: 132px;
+}
+.scrollViewInner .scrollView {
+  width: 100%;
+  height: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 800px 533px;
+  background-position: 50% 0%;
+}
 .header h5 {
   font-size: 14pt;
 }
@@ -52,7 +61,7 @@
   background-color: #fff;
   transition: all 0.3s;
   opacity: 0.9;
-  /* visibility: hidden; */
+
   z-index: 2;
 }
 .popupMenu a,
